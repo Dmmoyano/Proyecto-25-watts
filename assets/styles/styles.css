@@ -11498,17 +11498,24 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 62.5%;
+  width: 100%;
+}
+ 
+
 
 .header {
   background-image: url(../imagenes/slider-1.png);
-  top: 0px;
-  left: 0px;
   width: 1366px;
   height: 768px;
 }
@@ -11517,7 +11524,8 @@ fieldset:disabled .btn {
   border-bottom: 1px solid orange;
   width: 1366px;
   height: 96px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__section--toplogo {
@@ -11528,32 +11536,35 @@ fieldset:disabled .btn {
   margin-left: 5%;
 }
 
-.header__nav {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column-reverse;
+nav {
+  margin-right: 110px;
 }
 
-.header__nav--ul {
-  justify-content: space-between;
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav li {
   list-style: none;
-  display: flex;
-  margin-left: 810.5px;
-  margin-right: 110.5px;
+  margin-left: 55px;
+  margin-top: 33px;
 }
 
-header__nav--items {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  left: 1190px;
-  width: 75px;
-  height: 96px;
-}
+nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: sans-serif; 
+
+ }
 
 .h1 {
   font-size: 48px;
   width: 554px;
   height: 115px;
-  margin-top: 254px;
+  margin-top: 158px;
   margin-left: 101px;
   margin-right: 711px;
   color: #FFFFFF;
@@ -11563,7 +11574,7 @@ header__nav--items {
 
 .subtitulo__h1 {
   text-align: left;
-  font-size: 21px;
+  font-size: 16px;
   margin-top: 30px;
   margin-left: 101px;
   width: 343px;
@@ -11579,13 +11590,13 @@ header__nav--items {
   margin-left: 101px;
   width: 144px;
   height: 48px;
-  background: #E0752F 0% 0% no-repeat padding-box;
+  background: #E0752F;
   border-radius: 25px;
   opacity: 1;
-  letter-spacing: var(--unnamed-character-spacing-0-22);
   text-align: center;
   color: #FFFFFF;
   font-family: sans-serif;
+  font-size: 16px;
 }
 
 #about {
@@ -11663,6 +11674,7 @@ b {
   margin-right: 248px;
   margin-left: 50px;
   color: #FFFFFF;
+  font-size: 16px;
 }
 
 .tituloh2 {
@@ -11678,21 +11690,20 @@ b {
   margin-right: 49px;
   color: #FFFFFF;
   letter-spacing: 0.22px;
-  font-size: 16;
+  font-size: 16px;
 }
-
-.imgflechaizq {
+#flechas{
+  display: flex;
+  z-index: 5;    
   margin-left: 371.3px;
-  margin-top: 32.5px;
-  margin-right: 79.5px;
 }
+.imgflechader{
+  margin-left: 10.4px;
 
-.imgflechader {
-  margin-top: 32.5px;
-  margin-left: 401.7px;
-  margin-right: 49.3px;
 }
-
+.imgflechaizq{
+margin-left: 10.4px;
+}
 .services {
   width: 100%;
   height: 650px;
@@ -11717,21 +11728,47 @@ b {
   margin-right: 596px;
   z-index: 3;
 }
+.p-acordeon{
+  font-size: 16px;
+  font-family: sans-serif;
+}
 
 .contact{
-  width: 1366px;
+  width: 100%;
   height: 768px;
   z-index: 1;
-  margin-top: 120px;
+  background: #F2F4F1;
+  position: relative;
 }
 .contenedor__contact{
   width: 398px;
   height: 768px;
   margin-left: 968px;
   background-color: #DCE1DA;
-  opacity: 1;
   position: absolute;
   z-index: 2;
+}
+.h2__contact{
+  font-family: sans-serif;
+  font-size: 39px;
+  padding-left: 101px;
+  padding-top: 120px;
+}
+.lista__contact{
+  margin-left: 101px;
+  margin-top: 75px;
+  width: 471px;
+  height: 345px;
+  list-style: none;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.items-lista{
+  margin-top: 43px;
+}
+hr {
+  height: 73px;
+  width: 471px;
 }
 .imagen__contact{
   background-image: url(../imagenes/contact-image.png);
@@ -11742,15 +11779,47 @@ b {
   height: 400px;
   margin-top: 192px;
 }
-
-
-
 .button__contact{
   width: 144px;
   height: 48px;
-  border-radius: 25px;
-  opacity: 1;
   margin-left: 101px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: sans-serif;
+  background: #E0752F;
+  color: var(--bs-light);
 }
+.footer {
+  background:#343434;
+  width: 1366px;
+  height: 96px;
+  margin-top: 72px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.pfooter {
+  display: flex;
+  margin-top: 38px;
+  margin-left: 101px;
+  margin-right: 1070px;
+  width: 195px;
+  height: 21px;
+  color: #DCE1DA; 
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.22px;
+}
+.imgfooter {
+  background-image: url(../imagenes/footer-logo.png);
+  display: flex;
+  margin-top: 38px;
+  width: 86px;
+  height: 20px;
+  z-index: 2;
+  margin-right: 100px;
+  margin-left: -1179px;
+}
+ 
 
 /*# sourceMappingURL=styles.css.map */
